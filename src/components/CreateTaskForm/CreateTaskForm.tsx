@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Box, Typography, Stack } from '@mui/material';
 import TaskTitleField from './TaskTitleField';
 import TaskDescriptionField from './TaskDescriptionField';
+import TaskDateField from './TaskDateField';
 
 const CreateTaskForm: FC = () => {
   return (
@@ -19,6 +20,7 @@ const CreateTaskForm: FC = () => {
       <Stack sx={{ width: '100%' }} spacing={2}>
         <TaskTitleField />
         <TaskDescriptionField />
+        <TaskDateField />
       </Stack>
     </Box>
   );
