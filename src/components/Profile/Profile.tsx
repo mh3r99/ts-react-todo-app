@@ -1,7 +1,11 @@
 import React, { FC } from 'react';
 import { Avatar, Box, Typography } from '@mui/material';
 
-const Profile: FC = () => {
+interface IProfile {
+  name?: string;
+}
+
+const Profile: FC<IProfile> = ({ name = 'John' }) => {
   return (
     <Box
       display="flex"
@@ -18,11 +22,11 @@ const Profile: FC = () => {
         }}
       >
         <Typography variant="h4" color="text.primary">
-          J
+          {`${name.substring(0, 1)}`}
         </Typography>
       </Avatar>
       <Typography variant="h6" color="text.primary">
-        Welcome, John
+        Welcome, {name}
       </Typography>
       <Typography variant="body1" color="text.primary">
         This is your personal tasks manager
