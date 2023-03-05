@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Stack } from '@mui/material';
+import TaskTitleField from './TaskTitleField';
+import TaskDescriptionField from './TaskDescriptionField';
 
 const CreateTaskForm: FC = () => {
   return (
@@ -14,6 +16,10 @@ const CreateTaskForm: FC = () => {
       <Typography mb={2} component="h2" variant="h6">
         Create A Task
       </Typography>
+      <Stack sx={{ width: '100%' }} spacing={2}>
+        <TaskTitleField />
+        <TaskDescriptionField />
+      </Stack>
     </Box>
   );
 };
