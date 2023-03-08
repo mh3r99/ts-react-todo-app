@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Box } from '@mui/material';
 import { format } from 'date-fns';
 import TaskCounter from '../TaskCounter/TaskCounter';
+import Task from '../Task/Task';
 
 const TaskArea = () => {
   return (
@@ -38,9 +39,9 @@ const TaskArea = () => {
           xs={10}
           md={8}
         >
-          <Box>Task Will Come Over Here</Box>
-          <Box>Task Will Come Over Here</Box>
-          <Box>Task Will Come Over Here</Box>
+          <Task />
+          <Task />
+          <Task />
         </Grid>
       </Grid>
     </Grid>
