@@ -5,8 +5,12 @@ import {
   Box,
   Button,
 } from '@mui/material';
+import { ITaskFooter } from './interfaces/ITaskFooter';
 
-const TaskFooter: FC = () => {
+const TaskFooter: FC<ITaskFooter> = ({
+  onStatusChange = (e) => console.log(e),
+  onClick = (e) => console.log(e),
+}) => {
   return (
     <Box
       display="flex"
@@ -16,13 +20,19 @@ const TaskFooter: FC = () => {
     >
       <FormControlLabel
         label="In Progress"
-        control={<Switch color="warning" />}
+        control={
+          <Switch
+            color="warning"
+            onChange={onStatusChange}
+          />
+        }
       />
       <Button
         variant="contained"
         color="success"
         size="small"
         sx={{ color: '#fff' }}
+        onClick={onClick}
       >
         Mark Complete
       </Button>
