@@ -6,6 +6,7 @@ import TaskFooter from './TaskFooter';
 import { ITask } from './interfaces/ITask';
 import { Status } from '../CreateTaskForm/enums/Status';
 import { Priority } from '../CreateTaskForm/enums/Priority';
+import { renderPriorityBorderColors } from './helpers/renderPriorityBorderColor';
 
 const Task: FC<ITask> = ({
   title = 'Test Title',
@@ -29,7 +30,7 @@ const Task: FC<ITask> = ({
         backgroundColor: 'background.paper',
         borderRadius: '8px',
         border: '1px solid',
-        borderColor: 'error.light',
+        borderColor: renderPriorityBorderColors(priority),
       }}
     >
       <TaskHeader title={title} date={date} />
